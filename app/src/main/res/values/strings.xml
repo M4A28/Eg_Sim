@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">اكواد شبكات المحمول</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <!-- TODO: Remove or change this placeholder text -->
+
+    <string name="about" formatted="false">هذا التطبيق طور بواسطة: <a href="">محمد موسى</a> \n\n هذا التطبيق يجمع لك كل اكواد شباكات المحمول في مكان واحد بكل سهولة و يسر كل ما عليك فعله لاستخدام الكود الضغط عليه  . </string>
+</resources>

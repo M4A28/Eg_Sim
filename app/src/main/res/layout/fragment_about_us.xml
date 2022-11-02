@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".fragments.AboutUsFragment">
+
+    <LinearLayout
+        android:layout_margin="@dimen/_8sdp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textSize="@dimen/_20ssp"
+            android:padding="@dimen/_5sdp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/about"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_20ssp"
+            android:padding="@dimen/_5sdp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/iv_facebook"
+                android:layout_width="@dimen/_55sdp"
+                android:layout_height="@dimen/_55sdp"
+                android:layout_margin="@dimen/_20sdp"
+                android:src="@drawable/ic_facebook"/>
+
+            <ImageView
+                android:id="@+id/iv_twitter"
+                android:layout_width="@dimen/_55sdp"
+                android:layout_height="@dimen/_55sdp"
+                android:layout_margin="@dimen/_20sdp"
+                android:src="@drawable/ic_twitter_logo"/>
+
+            <ImageView
+                android:id="@+id/iv_github"
+                android:layout_width="@dimen/_55sdp"
+                android:layout_height="@dimen/_55sdp"
+                android:layout_margin="@dimen/_20sdp"
+                android:src="@drawable/ic_github"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</FrameLayout>

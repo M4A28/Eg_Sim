@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/cv_menu_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/_2sdp">
+
+    <LinearLayout
+        android:layout_margin="@dimen/_6sdp"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_gravity="center"
+            android:padding="@dimen/_6sdp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_gravity="right"
+                android:gravity="right"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_18ssp"
+                android:layout_width="match_parent"
+                android:textStyle="bold"
+                android:layout_height="wrap_content"
+                android:text="الطوارئ" />
+
+            <TextView
+                android:id="@+id/tv_description"
+                android:layout_gravity="right"
+                android:gravity="right"
+                android:textSize="@dimen/_14ssp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/light_gray"
+                android:text=" الطوارئ مثل الشرطة, الاسعاف الخ …"/>
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/iv_side_image"
+            android:layout_width="@dimen/_72sdp"
+            android:layout_height="@dimen/_72sdp"
+            android:src="@drawable/ic_star"/>
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

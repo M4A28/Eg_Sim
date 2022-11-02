@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="app/src/main/res/drawable/ic_contacts.xml" value="0.169" />
+        <entry key="app/src/main/res/drawable/ic_etisalat.xml" value="0.18" />
+        <entry key="app/src/main/res/drawable/ic_money.xml" value="0.132" />
+        <entry key="app/src/main/res/drawable/ic_orange.xml" value="0.189" />
+        <entry key="app/src/main/res/drawable/ic_vodafone.xml" value="0.189" />
+        <entry key="app/src/main/res/drawable/ic_warning.xml" value="0.189" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/activity_scen.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/call_me.xml" value="0.4279475982532751" />
+        <entry key="app/src/main/res/layout/call_me_pleass.xml" value="0.322265625" />
+        <entry key="app/src/main/res/layout/charg_diaglo.xml" value="0.4279475982532751" />
+        <entry key="app/src/main/res/layout/code_item_layout.xml" value="0.49344978165938863" />
+        <entry key="app/src/main/res/layout/fragment_about.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_about_us.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/fragment_call_me.xml" value="0.5" />
+        <entry key="app/src/main/res/layout/fragment_charge_dialog.xml" value="0.42884990253411304" />
+        <entry key="app/src/main/res/layout/fragment_p_u_k.xml" value="0.67" />
+        <entry key="app/src/main/res/layout/fragment_transform_charg.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/fragment_we_code.xml" value="0.19583333333333333" />
+        <entry key="app/src/main/res/layout/phone_company_layout_2.xml" value="0.19583333333333333" />
+        <entry key="app/src/main/res/layout/phone_compny_layout.xml" value="0.5" />
+        <entry key="app/src/main/res/layout/test.xml" value="0.49344978165938863" />
+        <entry key="app/src/main/res/layout/testing.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/transform_charg.xml" value="0.5" />
+        <entry key="app/src/main/res/menu/main_menu.xml" value="0.67" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

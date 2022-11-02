@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:onClick="shareApp"
+        android:title="مشاركة التطبيق" />
+
+    <item
+        android:onClick="aboutUS"
+        android:title="معلومات عن التطبيق"/>
+
+
+</menu>
