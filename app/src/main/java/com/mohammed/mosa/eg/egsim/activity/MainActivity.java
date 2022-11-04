@@ -85,7 +85,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
         }));
 
-        companies.add(new Company("الطوارئ", "الطوارئ: الاسعاف, الشرطة الخ…", R.drawable.ic_warning, K ->{
+        companies.add(new Company("الطوارئ", "الطوارئ: الاسعاف, الشرطة الخ…", R.drawable.warning, K ->{
             Intent intent = new Intent(getBaseContext(), SceneActivity.class);
             intent.putExtra(COM, EMERGENCE);
             startActivity(intent);

@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.mohammed.mosa.eg.egsim.R;
 import com.mohammed.mosa.eg.egsim.databinding.PhoneCompnyLayoutBinding;
 import com.mohammed.mosa.eg.egsim.objects.Company;
+import com.mohammed.mosa.eg.egsim.objects.Company;
 
 import java.util.ArrayList;
 
