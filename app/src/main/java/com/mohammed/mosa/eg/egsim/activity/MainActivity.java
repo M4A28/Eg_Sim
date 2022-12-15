@@ -61,11 +61,6 @@ public class MainActivity extends AppCompatActivity {
     public ArrayList<Company> fillMenu(){
         ArrayList<Company> companies = new ArrayList<>();
 
-        companies.add(new Company("المصرية للاتصالات | WE", "وي قبل اي حد", R.drawable.ic_we, K ->{
-                Intent intent = new Intent(getBaseContext(), SceneActivity.class);
-                intent.putExtra(COM, WE);
-                startActivity(intent);
-            }));
 
         companies.add(new Company("اتصالات | Etisalat", "ديما مع بعض", R.drawable.ic_etisalat, k ->{
                 Intent intent = new Intent(getBaseContext(), SceneActivity.class);
@@ -85,11 +80,21 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
         }));
 
+
+        companies.add(new Company("المصرية للاتصالات | WE", "وي قبل اي حد", R.drawable.ic_we, K ->{
+            Intent intent = new Intent(getBaseContext(), SceneActivity.class);
+            intent.putExtra(COM, WE);
+            startActivity(intent);
+        }));
+
         companies.add(new Company("الطوارئ", "الطوارئ: الاسعاف, الشرطة الخ…", R.drawable.warning, K ->{
             Intent intent = new Intent(getBaseContext(), SceneActivity.class);
             intent.putExtra(COM, EMERGENCE);
             startActivity(intent);
         }));
+
+
+
 //        companies.add(new Company("اكواد خاصة", "IMEI, حالة الهاتف", R.drawable.ic_star, K ->{
 //            Intent intent = new Intent(getBaseContext(), SceneActivity.class);
 //            intent.putExtra(COM, SPECIAL);

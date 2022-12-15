@@ -49,7 +49,7 @@
             android:id="@+id/iv_side_image"
             android:layout_width="@dimen/_48sdp"
             android:layout_height="@dimen/_48sdp"
-            android:src="@drawable/ic_015"
+            android:src="@drawable/ic_phone_we"
             android:layout_gravity="center"/>
 
     </LinearLayout>

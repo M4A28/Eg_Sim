@@ -176,55 +176,55 @@ public class SceneActivity extends AppCompatActivity {
     // TODO: add more code
     private ArrayList<USSD> etsalatData() {
         ArrayList<USSD> USSDS = new ArrayList<>();
-        USSDS.add(new USSD("*556*رقم الكرت#", "شحن الرصيد", R.drawable.ic_011, K -> {
+        USSDS.add(new USSD("*556*رقم الكرت#", "شحن الرصيد", R.drawable.ic_phone_et, K -> {
                 ChargeDialogFragment chargeDialogFragment = ChargeDialogFragment.newInstance("*556*", MainActivity.ETISALAT);
                 chargeDialogFragment.show(getSupportFragmentManager(), null);}));
 
-        USSDS.add(new USSD("*111*رقم الهاتف#", "كلمني شكرا", R.drawable.ic_011, K -> {
+        USSDS.add(new USSD("*111*رقم الهاتف#", "كلمني شكرا", R.drawable.ic_phone_et, K -> {
                 CallMeFragment callMeFragment = CallMeFragment.newInstance(MainActivity.ETISALAT, "*111*");
                 callMeFragment.show(getSupportFragmentManager(), null);}));
 
-        USSDS.add(new USSD("*557*الرقم*المبلغ#", "تحويل الرصيد", R.drawable.ic_011, K -> {
+        USSDS.add(new USSD("*557*الرقم*المبلغ#", "تحويل الرصيد", R.drawable.ic_phone_et, K -> {
             TransformChargeFragment transformChargeFragment = TransformChargeFragment.newInstance(MainActivity.ETISALAT, "*557*");
             transformChargeFragment.show(getSupportFragmentManager(), null);}));
 
-        USSDS.add(new USSD("*911#", " سلفني شكرا", R.drawable.ic_011, ussdCall("*911#")));
+        USSDS.add(new USSD("*911#", " سلفني شكرا", R.drawable.ic_phone_et, ussdCall("*911#")));
 
-        USSDS.add(new USSD("*947#", "معرفة رقم هاتفك", R.drawable.ic_011, ussdCall("*947#")));
+        USSDS.add(new USSD("*947#", "معرفة رقم هاتفك", R.drawable.ic_phone_et, ussdCall("*947#")));
 
-        USSDS.add(new USSD("*011#", "العروض اليومية", R.drawable.ic_011, ussdCall("*011#")));
+        USSDS.add(new USSD("*011#", "العروض اليومية", R.drawable.ic_phone_et, ussdCall("*011#")));
 
-        USSDS.add(new USSD("*80*1*1#", "لمعرفة اخر 5 معاملات", R.drawable.ic_011, ussdCall("*80*1*1#")));
+        USSDS.add(new USSD("*80*1*1#", "لمعرفة اخر 5 معاملات", R.drawable.ic_phone_et, ussdCall("*80*1*1#")));
 
-        USSDS.add(new USSD("*558*5#", "استهلاك الميجا بايتس", R.drawable.ic_011, ussdCall("*558*5#")));
+        USSDS.add(new USSD("*558*5#", "استهلاك الميجا بايتس", R.drawable.ic_phone_et, ussdCall("*558*5#")));
 
-        USSDS.add(new USSD("*811#", "عروض اقوى كرت في مصر", R.drawable.ic_011, ussdCall("*811#")));
+        USSDS.add(new USSD("*811#", "عروض اقوى كرت في مصر", R.drawable.ic_phone_et, ussdCall("*811#")));
 
-        USSDS.add(new USSD("*2002#", "الديون التي عليك", R.drawable.ic_011, ussdCall("*2002#")));
+        USSDS.add(new USSD("*2002#", "الديون التي عليك", R.drawable.ic_phone_et, ussdCall("*2002#")));
 
-        USSDS.add(new USSD("*8888#", "معرفة الرصيد", R.drawable.ic_011, ussdCall("*8888#")));
+        USSDS.add(new USSD("*8888#", "معرفة الرصيد", R.drawable.ic_phone_et, ussdCall("*8888#")));
 
-        USSDS.add(new USSD("*838#", "معرفة الاستهلاك", R.drawable.ic_011, ussdCall("*838#")));
+        USSDS.add(new USSD("*838#", "معرفة الاستهلاك", R.drawable.ic_phone_et, ussdCall("*838#")));
 
-        USSDS.add(new USSD("*566#", "باقات الانترنت", R.drawable.ic_011, ussdCall("*566#")));
+        USSDS.add(new USSD("*566#", "باقات الانترنت", R.drawable.ic_phone_et, ussdCall("*566#")));
 
-        USSDS.add(new USSD("*689#", "باقات  المكالمات", R.drawable.ic_011, ussdCall("*689#")));
+        USSDS.add(new USSD("*689#", "باقات  المكالمات", R.drawable.ic_phone_et, ussdCall("*689#")));
 
-        USSDS.add(new USSD("*807#", "تجديد باقات  المكالمات", R.drawable.ic_011, ussdCall("*807#")));
+        USSDS.add(new USSD("*807#", "تجديد باقات  المكالمات", R.drawable.ic_phone_et, ussdCall("*807#")));
 
-        USSDS.add(new USSD("*770#", "التحويل لنظام الفاتورة", R.drawable.ic_011, ussdCall("*770#")));
+        USSDS.add(new USSD("*770#", "التحويل لنظام الفاتورة", R.drawable.ic_phone_et, ussdCall("*770#")));
 
-        USSDS.add(new USSD("*100#", "رسالة ضبط الانترنت", R.drawable.ic_011, ussdCall("*100#")));
+        USSDS.add(new USSD("*100#", "رسالة ضبط الانترنت", R.drawable.ic_phone_et, ussdCall("*100#")));
 
-        USSDS.add(new USSD("0235346333", "خدمة العملاء من الخط الارضي", R.drawable.ic_011, ussdCall("0235346333")));
+        USSDS.add(new USSD("0235346333", "خدمة العملاء من الخط الارضي", R.drawable.ic_phone_et, ussdCall("0235346333")));
 
-        USSDS.add(new USSD("500", "معرفة رمز PUK", R.drawable.ic_011,ussdCall("500")));
+        USSDS.add(new USSD("500", "معرفة رمز PUK", R.drawable.ic_phone_et,ussdCall("500")));
 
-        USSDS.add(new USSD("555", "معرفة نظام خطك", R.drawable.ic_011, ussdCall("555")));
+        USSDS.add(new USSD("555", "معرفة نظام خطك", R.drawable.ic_phone_et, ussdCall("555")));
 
-        USSDS.add(new USSD("525", "تغير النظام", R.drawable.ic_011, ussdCall("525")));
+        USSDS.add(new USSD("525", "تغير النظام", R.drawable.ic_phone_et, ussdCall("525")));
 
-        USSDS.add(new USSD("333", "خدمة العملاء", R.drawable.ic_011, ussdCall("333")));
+        USSDS.add(new USSD("333", "خدمة العملاء", R.drawable.ic_phone_et, ussdCall("333")));
 
         return USSDS;
 
@@ -235,35 +235,35 @@ public class SceneActivity extends AppCompatActivity {
         ArrayList<USSD> USSDS = new ArrayList<>();
 
         // TODO
-        USSDS.add(new USSD("*555*رقم الكرت#", "شحن الرصيد", R.drawable.ic_015,  K -> {
+        USSDS.add(new USSD("*555*رقم الكرت#", "شحن الرصيد", R.drawable.ic_phone_we, K -> {
             ChargeDialogFragment chargeDialogFragment = ChargeDialogFragment.newInstance("*555*", MainActivity.WE);
             chargeDialogFragment.show(getSupportFragmentManager(), null);}));
 
-        USSDS.add(new USSD("*515*رقم الهاتف#", "كلمني شكرا", R.drawable.ic_015, K -> {
+        USSDS.add(new USSD("*515*رقم الهاتف#", "كلمني شكرا", R.drawable.ic_phone_we, K -> {
             CallMeFragment callMeFragment = CallMeFragment.newInstance(MainActivity.WE, "*515*");
             callMeFragment.show(getSupportFragmentManager(), null);}));
 
-        USSDS.add(new USSD("*504#", "سلفني شكرا", R.drawable.ic_015, ussdCall("*504#")));
+        USSDS.add(new USSD("*504#", "سلفني شكرا", R.drawable.ic_phone_we, ussdCall("*504#")));
 
-        USSDS.add(new USSD("*323*رقم الهاتف*المبلغ#", "تحويل الرصيد", R.drawable.ic_015, K -> {
+        USSDS.add(new USSD("*323*رقم الهاتف*المبلغ#", "تحويل الرصيد", R.drawable.ic_phone_we, K -> {
             TransformChargeFragment transformChargeFragment = TransformChargeFragment.newInstance(MainActivity.WE, "*323*");
             transformChargeFragment.show(getSupportFragmentManager(), null);}));
 
-        USSDS.add(new USSD("*688#", "معرفة رقم هاتفك", R.drawable.ic_015, ussdCall("*688#")));
+        USSDS.add(new USSD("*688#", "معرفة رقم هاتفك", R.drawable.ic_phone_we, ussdCall("*688#")));
 
-        USSDS.add(new USSD("*550#", "معرفة الرصيد", R.drawable.ic_015, ussdCall("*550#")));
+        USSDS.add(new USSD("*550#", "معرفة الرصيد", R.drawable.ic_phone_we, ussdCall("*550#")));
 
-        USSDS.add(new USSD("*999#", "باقات و خدمات الانترنت", R.drawable.ic_015, ussdCall("*999#")));
+        USSDS.add(new USSD("*999#", "باقات و خدمات الانترنت", R.drawable.ic_phone_we, ussdCall("*999#")));
 
-        USSDS.add(new USSD("*600*6#", "اضافة رقم للمفضلة", R.drawable.ic_015, ussdCall("*600*6#")));
+        USSDS.add(new USSD("*600*6#", "اضافة رقم للمفضلة", R.drawable.ic_phone_we, ussdCall("*600*6#")));
 
-        USSDS.add(new USSD("*800#", "حظر الارقام المزعجة", R.drawable.ic_015, ussdCall("*800#")));
+        USSDS.add(new USSD("*800#", "حظر الارقام المزعجة", R.drawable.ic_phone_we, ussdCall("*800#")));
 
-        USSDS.add(new USSD("19777", "خدمة العملاء DSL", R.drawable.ic_015, ussdCall("19777")));
+        USSDS.add(new USSD("19777", "خدمة العملاء DSL", R.drawable.ic_phone_we, ussdCall("19777")));
 
-        USSDS.add(new USSD("111", "رسالة الضبط", R.drawable.ic_015, ussdCall("111")));
+        USSDS.add(new USSD("111", "رسالة الضبط", R.drawable.ic_phone_we, ussdCall("111")));
 
-        USSDS.add(new USSD("111", "خدمة العملاء", R.drawable.ic_015, ussdCall("111")));
+        USSDS.add(new USSD("111", "خدمة العملاء", R.drawable.ic_phone_we, ussdCall("111")));
 
         return USSDS;
     }
@@ -272,43 +272,43 @@ public class SceneActivity extends AppCompatActivity {
     private ArrayList<USSD> vodafoneData() {
         ArrayList<USSD> USSDS = new ArrayList<>();
         // TODO
-        USSDS.add(new USSD("*858*رقم الكرت#", "شحن الرصيد", R.drawable.ic_010,  K -> {
+        USSDS.add(new USSD("*858*رقم الكرت#", "شحن الرصيد", R.drawable.ic_phone_vf, K -> {
             ChargeDialogFragment chargeDialogFragment = ChargeDialogFragment.newInstance("*858*", "vodafone");
             chargeDialogFragment.show(getSupportFragmentManager(), null);}));
 
-        USSDS.add(new USSD("*505*رقم الهاتف#", "كلمني شكرا(فودفون)", R.drawable.ic_010, K -> {
+        USSDS.add(new USSD("*505*رقم الهاتف#", "كلمني شكرا(فودفون)", R.drawable.ic_phone_vf, K -> {
             CallMeFragment callMeFragment = CallMeFragment.newInstance(MainActivity.VODAFONE, "*505*");
             callMeFragment.show(getSupportFragmentManager(), null);}));
 
-        USSDS.add(new USSD("*506*رقم الهاتف#", "كلمني شكرا(بقية الشبكات)", R.drawable.ic_010, K -> {
+        USSDS.add(new USSD("*506*رقم الهاتف#", "كلمني شكرا(بقية الشبكات)", R.drawable.ic_phone_vf, K -> {
             CallMeFragment callMeFragment = CallMeFragment.newInstance(MainActivity.VODAFONE, "*506*");
             callMeFragment.show(getSupportFragmentManager(), null);}));
 
-        USSDS.add(new USSD("*868*رقم الهاتف*المبلغ#", "تحويل الرصيد", R.drawable.ic_010, K -> {
+        USSDS.add(new USSD("*868*رقم الهاتف*المبلغ#", "تحويل الرصيد", R.drawable.ic_phone_vf, K -> {
             TransformChargeFragment transformChargeFragment = TransformChargeFragment.newInstance(MainActivity.VODAFONE, "*868*2*");
             transformChargeFragment.show(getSupportFragmentManager(), null);}));
 
-        USSDS.add(new USSD("*868*3#", "سلفني شكرا", R.drawable.ic_010, ussdCall("*868*3#")));
+        USSDS.add(new USSD("*868*3#", "سلفني شكرا", R.drawable.ic_phone_vf, ussdCall("*868*3#")));
 
-        USSDS.add(new USSD("*878#", "معرفة رقم هاتفك", R.drawable.ic_010, ussdCall("*878#")));
+        USSDS.add(new USSD("*878#", "معرفة رقم هاتفك", R.drawable.ic_phone_vf, ussdCall("*878#")));
 
-        USSDS.add(new USSD("*868*1#", "معرفة الرصيد", R.drawable.ic_010,ussdCall("*868*1#")));
+        USSDS.add(new USSD("*868*1#", "معرفة الرصيد", R.drawable.ic_phone_vf,ussdCall("*868*1#")));
 
-        USSDS.add(new USSD("*888*رقم الهاتف#", "معرفة رقم PUK", R.drawable.ic_010, K -> {
+        USSDS.add(new USSD("*888*رقم الهاتف#", "معرفة رقم PUK", R.drawable.ic_phone_vf, K -> {
             PUKFragment pukFragment = PUKFragment.newInstance(MainActivity.VODAFONE, "*888*");
             pukFragment.show(getSupportFragmentManager(), null);}));
 
-        USSDS.add(new USSD("*60#", "الاستعلام عن الفليكسات", R.drawable.ic_010,ussdCall("*60#")));
+        USSDS.add(new USSD("*60#", "الاستعلام عن الفليكسات", R.drawable.ic_phone_vf,ussdCall("*60#")));
 
-        USSDS.add(new USSD("*225#", "لتجديد باقة المكالمات", R.drawable.ic_010, ussdCall("*225#")));
+        USSDS.add(new USSD("*225#", "لتجديد باقة المكالمات", R.drawable.ic_phone_vf, ussdCall("*225#")));
 
-        USSDS.add(new USSD("*818*2#", "لمعرفة نقاط فودفون", R.drawable.ic_010, ussdCall("*818*2#")));
+        USSDS.add(new USSD("*818*2#", "لمعرفة نقاط فودفون", R.drawable.ic_phone_vf, ussdCall("*818*2#")));
 
-        USSDS.add(new USSD("*550*0#", "الغاء الكول تون", R.drawable.ic_010, ussdCall("*550*0#")));
+        USSDS.add(new USSD("*550*0#", "الغاء الكول تون", R.drawable.ic_phone_vf, ussdCall("*550*0#")));
 
-        USSDS.add(new USSD("*9*5#", "تشغيل خدمة فودفون كاش", R.drawable.ic_010, ussdCall("*9*5#")));
+        USSDS.add(new USSD("*9*5#", "تشغيل خدمة فودفون كاش", R.drawable.ic_phone_vf, ussdCall("*9*5#")));
 
-        USSDS.add(new USSD("888", "خدمة العملاء", R.drawable.ic_010, ussdCall("888")));
+        USSDS.add(new USSD("888", "خدمة العملاء", R.drawable.ic_phone_vf, ussdCall("888")));
 
         return USSDS;
     }
@@ -317,37 +317,37 @@ public class SceneActivity extends AppCompatActivity {
     private ArrayList<USSD> orangeData() {
         ArrayList<USSD> USSDS = new ArrayList<>();
 
-        USSDS.add(new USSD("#102#*رقم الكرت#", "شحن الرصيد", R.drawable.ic_012, K -> {
+        USSDS.add(new USSD("#102#*رقم الكرت#", "شحن الرصيد", R.drawable.ic_phone_orange, K -> {
             ChargeDialogFragment chargeDialogFragment = ChargeDialogFragment.newInstance("#102#*", MainActivity.ORANGE);
             chargeDialogFragment.show(getSupportFragmentManager(), null);}));
 
-        USSDS.add(new USSD("#121*رقم الهاتف#", "كلمني شكرا", R.drawable.ic_012, K -> {
+        USSDS.add(new USSD("#121*رقم الهاتف#", "كلمني شكرا", R.drawable.ic_phone_orange, K -> {
             CallMeFragment callMeFragment = CallMeFragment.newInstance(MainActivity.ORANGE, "#121*");
             callMeFragment.show(getSupportFragmentManager(), null);}));
 
-        USSDS.add(new USSD("#100#2#", "سلفني شكرا", R.drawable.ic_012, ussdCall("#100#2#")));
+        USSDS.add(new USSD("#100#2#", "سلفني شكرا", R.drawable.ic_phone_orange, ussdCall("#100#2#")));
 
-        USSDS.add(new USSD("#119#", "معرفة رقم هاتفك", R.drawable.ic_012, ussdCall("#119#")));
+        USSDS.add(new USSD("#119#", "معرفة رقم هاتفك", R.drawable.ic_phone_orange, ussdCall("#119#")));
 
-        USSDS.add(new USSD("#100#3#", "معرفة الرصيد", R.drawable.ic_012, ussdCall("#100#3#")));
+        USSDS.add(new USSD("#100#3#", "معرفة الرصيد", R.drawable.ic_phone_orange, ussdCall("#100#3#")));
 
-        USSDS.add(new USSD("#100#2#", "تحويل الرصيد", R.drawable.ic_012, ussdCall("#100#2#")));
+        USSDS.add(new USSD("#100#2#", "تحويل الرصيد", R.drawable.ic_phone_orange, ussdCall("#100#2#")));
 
-        USSDS.add(new USSD("#12#", "العروض اليومية", R.drawable.ic_012, ussdCall("#12#")));
+        USSDS.add(new USSD("#12#", "العروض اليومية", R.drawable.ic_phone_orange, ussdCall("#12#")));
 
-        USSDS.add(new USSD("#100#", "باقة GO الشهرية", R.drawable.ic_012, ussdCall("#100#")));
+        USSDS.add(new USSD("#100#", "باقة GO الشهرية", R.drawable.ic_phone_orange, ussdCall("#100#")));
 
-        USSDS.add(new USSD("#100#2#", "حظر الارقام المزعجة", R.drawable.ic_012, ussdCall("#100#2#")));
+        USSDS.add(new USSD("#100#2#", "حظر الارقام المزعجة", R.drawable.ic_phone_orange, ussdCall("#100#2#")));
 
-        USSDS.add(new USSD("999", "الغاء الكول تون", R.drawable.ic_012, ussdSend("إلغاء", "999")));
+        USSDS.add(new USSD("999", "الغاء الكول تون", R.drawable.ic_phone_orange, ussdSend("إلغاء", "999")));
 
-        USSDS.add(new USSD("600", "رسالة الضبط", R.drawable.ic_012, ussdSend(" ", "600")));
+        USSDS.add(new USSD("600", "رسالة الضبط", R.drawable.ic_phone_orange, ussdSend(" ", "600")));
 
-        USSDS.add(new USSD("115", "خدمة العملاء اورنج كاش", R.drawable.ic_012, ussdCall("115")));
+        USSDS.add(new USSD("115", "خدمة العملاء اورنج كاش", R.drawable.ic_phone_orange, ussdCall("115")));
 
-        USSDS.add(new USSD("110", "خدمة العملاء", R.drawable.ic_012, ussdCall("110")));
+        USSDS.add(new USSD("110", "خدمة العملاء", R.drawable.ic_phone_orange, ussdCall("110")));
 
-        USSDS.add(new USSD("16333", "خدمة العملاء DSL", R.drawable.ic_012, ussdCall("16333")));
+        USSDS.add(new USSD("16333", "خدمة العملاء DSL", R.drawable.ic_phone_orange, ussdCall("16333")));
         return USSDS;
     }
 

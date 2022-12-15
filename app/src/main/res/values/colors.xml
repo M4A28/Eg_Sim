@@ -5,6 +5,9 @@
 
     <color name="etisalat_light">#b2e200</color>
     <color name="etisalat_dark">#65b329</color>
+    <color name="we">#FF6200EE</color>
+    <color name="vodafone">#ee3023</color>
+    <color name="orange">#FF6600</color>
     <color name="red">#EF5350</color>
     <color name="yellow">#FFCA28</color>
     <color name="primary">#2196F3</color>

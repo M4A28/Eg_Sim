@@ -54,8 +54,8 @@ public class ChargeDialogFragment extends DialogFragment {
         customizeDialog(com);
         binding.btnCharg.setOnClickListener(view -> {
             String cardNumber = binding.etCardNumber.getText().toString();
-            if(cardNumber.isEmpty() || cardNumber.length() <= 11)
-                Toast.makeText(view.getContext(), "الرجاء ادخال رقم صحيح", Toast.LENGTH_SHORT).show();
+            if(cardNumber.isEmpty() || cardNumber.length() < 11)
+                Toast.makeText(getActivity().getApplicationContext(), "الرجاء ادخال رقم صحيح", Toast.LENGTH_SHORT).show();
             else
                 tellCode(ussd + cardNumber + "#", view.getContext());
         });

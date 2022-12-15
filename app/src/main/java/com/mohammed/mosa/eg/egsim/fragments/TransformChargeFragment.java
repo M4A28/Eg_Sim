@@ -83,7 +83,7 @@ public class TransformChargeFragment extends DialogFragment {
             else if(phone.length() < 11)
                 Toast.makeText(getContext(), "الرجاء ادخال رقم صحيح", Toast.LENGTH_SHORT).show();
             else {
-                tellCode(ussd + phone + "*" + money +  "#", view.getContext());
+                tellCode(ussd + phone + "*" + money +  "#", getContext());
             }
         });
         binding.ivContcat.setOnClickListener(view -> {
