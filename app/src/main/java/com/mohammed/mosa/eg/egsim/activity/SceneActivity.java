@@ -343,7 +343,7 @@ public class SceneActivity extends AppCompatActivity implements UsedListener {
 
         USSDS.add(new USSD("999", "الغاء الكول تون", R.drawable.ic_phone_orange, ussdSend("إلغاء", "999")));
 
-        USSDS.add(new USSD("600", "رسالة الضبط", R.drawable.ic_phone_orange, ussdSend(" ", "600")));
+        USSDS.add(new USSD("600", "رسالة الضبط", R.drawable.ic_sms_orange, ussdSend(" ", "600")));
 
         USSDS.add(new USSD("115", "خدمة العملاء اورنج كاش", R.drawable.ic_phone_orange, ussdCall("115")));
 
