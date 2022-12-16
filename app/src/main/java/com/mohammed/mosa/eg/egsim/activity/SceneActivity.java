@@ -20,11 +20,12 @@ import com.mohammed.mosa.eg.egsim.fragments.ChargeDialogFragment;
 import com.mohammed.mosa.eg.egsim.fragments.PUKFragment;
 import com.mohammed.mosa.eg.egsim.fragments.TransformChargeFragment;
 import com.mohammed.mosa.eg.egsim.objects.USSD;
+import com.mohammed.mosa.eg.egsim.objects.UsedListener;
 
 import java.util.ArrayList;
 import java.util.Collections;
 
-public class SceneActivity extends AppCompatActivity {
+public class SceneActivity extends AppCompatActivity implements UsedListener {
 //    public static final int REQ_PRE = 1;
     ActivityScenBinding binding;
     ArrayList<USSD> USSDS;
@@ -80,7 +81,7 @@ public class SceneActivity extends AppCompatActivity {
     }
 
 
-//    // this method for future only
+//    this function for testing only
 //    private void getPermission() {
 //        String[] permission = {Manifest.permission.READ_CONTACTS, Manifest.permission.CALL_PHONE, Manifest.permission.SEND_SMS};
 //        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.READ_CONTACTS)
@@ -104,6 +105,7 @@ public class SceneActivity extends AppCompatActivity {
     private  View.OnClickListener ussdCall(String ussd){
         return view -> dialUSSD(ussd);
     }
+
 
     private void sendSMS(String msg, String to){
         Intent intent =  new Intent();
@@ -351,4 +353,22 @@ public class SceneActivity extends AppCompatActivity {
         return USSDS;
     }
 
+    @Override
+    public void onCall(String code) {
+        Intent intent =  new Intent();
+        Uri uri = Uri.parse("tel:" + getStringCode(code));
+        intent.setAction(Intent.ACTION_DIAL);
+        intent.setData(uri);
+        startActivity(intent);
+    }
+
+    @Override
+    public void onSendSms(String msg, String to) {
+        Intent intent =  new Intent();
+        Uri uri = Uri.parse("smsto:" + getStringCode(to));
+        intent.setAction(Intent.ACTION_SENDTO);
+        intent.putExtra("sms_body", msg);
+        intent.setData(uri);
+        startActivity(intent);
+    }
 }
