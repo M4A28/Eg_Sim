@@ -5,4 +5,9 @@
     <!-- TODO: Remove or change this placeholder text -->
 
     <string name="about" formatted="false">هذا التطبيق طور بواسطة: <a href="">محمد موسى</a> \n\n هذا التطبيق يجمع لك كل اكواد شباكات المحمول في مكان واحد بكل سهولة و يسر كل ما عليك فعله لاستخدام الكود الضغط عليه  . </string>
+    <string name="enter_code_number">ادخل رقم كرت الشحن</string>
+    <string name="normal_charge">رصيد عادي</string>
+    <string name="mixsat">ميكسات</string>
+    <string name="call_and_minte">دقائق مكالمات</string>
+    <string name="charge">اشحن الرصيد</string>
 </resources>

@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
 import android.app.AlertDialog;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
@@ -26,7 +25,6 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 public class SceneActivity extends AppCompatActivity implements UsedListener {
-//    public static final int REQ_PRE = 1;
     ActivityScenBinding binding;
     ArrayList<USSD> USSDS;
     @Override
@@ -81,7 +79,7 @@ public class SceneActivity extends AppCompatActivity implements UsedListener {
     }
 
 
-//    this function for testing only
+
 //    private void getPermission() {
 //        String[] permission = {Manifest.permission.READ_CONTACTS, Manifest.permission.CALL_PHONE, Manifest.permission.SEND_SMS};
 //        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.READ_CONTACTS)
@@ -103,21 +101,21 @@ public class SceneActivity extends AppCompatActivity implements UsedListener {
     }
 
     private  View.OnClickListener ussdCall(String ussd){
-        return view -> dialUSSD(ussd);
+        return view -> onCall(ussd);
     }
 
 
-    private void sendSMS(String msg, String to){
-        Intent intent =  new Intent();
-        Uri uri = Uri.parse("smsto:" + getStringCode(to));
-        intent.setAction(Intent.ACTION_SENDTO);
-        intent.putExtra("sms_body", msg);
-        intent.setData(uri);
-        startActivity(intent);
-    }
+//    private void sendSMS(String msg, String to){
+//        Intent intent =  new Intent();
+//        Uri uri = Uri.parse("smsto:" + getStringCode(to));
+//        intent.setAction(Intent.ACTION_SENDTO);
+//        intent.putExtra("sms_body", msg);
+//        intent.setData(uri);
+//        startActivity(intent);
+//    }
 
     private  View.OnClickListener ussdSend(String msg, String to){
-        return view -> sendSMS(msg, to);
+        return view -> onSendSms(msg, to);
     }
 
     private String getStringCode(String code){
@@ -151,7 +149,7 @@ public class SceneActivity extends AppCompatActivity implements UsedListener {
         ArrayList<USSD> USSDS = new ArrayList<>();
         USSDS.add(new USSD("*#06#", "IMEI", R.drawable.ic_scanner, ussdCall("*#06#")));
         USSDS.add(new USSD("*#0*#", "اختبارات للهاتف", R.drawable.ic_handyman, ussdCall("*#0*#")));
-        USSDS.add(new USSD("*#*#4636#*#*", "معلومات عن البطارية و الWIFI", R.drawable.ic_device_information, ussdCall("*#*#4636#*#*")));
+        USSDS.add(new USSD("*#*#4636#*#*", "معلومات عن البطارية و ال WIFI", R.drawable.ic_device_information, ussdCall("*#*#4636#*#*")));
         USSDS.add(new USSD("*#*#7780#*#*", "اعادة ضبط المصنع", R.drawable.ic_restore, new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -164,18 +162,13 @@ public class SceneActivity extends AppCompatActivity implements UsedListener {
     private void alert(String ussd){
         AlertDialog.Builder dialog = new AlertDialog.Builder(this);
         dialog.setMessage("هل انت متاكد من اعادة ضبط المصنع");
-        dialog.setPositiveButton("موافق", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialogInterface, int i) {
-                dialUSSD(ussd);
-            }
-        });
+        dialog.setPositiveButton("موافق", (dialogInterface, i) -> dialUSSD(ussd));
         dialog.setNegativeButton("الغاء", null);
         dialog.show();
 
     }
 
-    // TODO: add more code
+    // TODO: add more ussd code
     private ArrayList<USSD> etsalatData() {
         ArrayList<USSD> USSDS = new ArrayList<>();
         USSDS.add(new USSD("*556*رقم الكرت#", "شحن الرصيد", R.drawable.ic_phone_et, K -> {
@@ -232,7 +225,7 @@ public class SceneActivity extends AppCompatActivity implements UsedListener {
 
     }
 
-    // TODO: add more code
+    // TODO: add more ussd code
     private ArrayList<USSD> weData() {
         ArrayList<USSD> USSDS = new ArrayList<>();
 
@@ -270,7 +263,7 @@ public class SceneActivity extends AppCompatActivity implements UsedListener {
         return USSDS;
     }
 
-    // TODO: add more code
+    // TODO: add more ussd code
     private ArrayList<USSD> vodafoneData() {
         ArrayList<USSD> USSDS = new ArrayList<>();
         // TODO
@@ -315,7 +308,7 @@ public class SceneActivity extends AppCompatActivity implements UsedListener {
         return USSDS;
     }
 
-    // TODO: add more code
+    // TODO: add more ussd code
     private ArrayList<USSD> orangeData() {
         ArrayList<USSD> USSDS = new ArrayList<>();
 
