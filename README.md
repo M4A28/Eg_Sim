@@ -1,6 +1,6 @@
 # SIM App for USSD Codes
 <div align="center">
-  <img src="[app-logo.png](screenshots/screenshots_1.png)" alt="App Logo" width="200" height="200" />
+  <img src="[screenshots/ic_app.png](screenshots/ic_app.png)" alt="App Logo" width="200" height="200" />
 </div>
 
 ## Overview
