@@ -1,7 +1,4 @@
 # SIM App for USSD Codes
-<div align="center">
-  <img src="[https://github.com/M4A28/Eg_Sim/screenshots/ic_app.png](screenshots/ic_app.png)" alt="App Logo" width="200" height="200" />
-</div>
 
 ## Overview
 
